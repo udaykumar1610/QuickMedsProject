@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+file:/C:/capstone/Login-RegisterFlow-Spring-Boot-Angular/Login%20&%20Register%20using%20Spring%20Boot%20+%20Angular/Backend/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+meta_index

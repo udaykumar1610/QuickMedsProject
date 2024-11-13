@@ -1,0 +1,117 @@
+/* General page styling */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Flexbox container to center the card */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Styling the card */
+  .custom-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* Stronger shadow to create depth */
+    background-color: rgba(255, 255, 255, 0.3);  /* More transparent background (30% opacity) */
+    padding: 30px;
+    border: 2px solid rgba(0, 123, 255, 0.5);  /* Light border with transparency */
+  }
+  
+  /* Styling the card body */
+  .custom-card .card-body {
+    padding: 25px;
+  }
+  
+  /* Title styling */
+  .custom-card .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form field label */
+  .form-label {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Input fields */
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 123, 255, 0.5);  /* Semi-transparent blue border */
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);  /* More transparent input fields */
+  }
+  
+  .form-control:focus {
+    border-color: rgba(0, 123, 255, 1);  /* Full opacity blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Subtle glow effect on focus */
+  }
+  
+  /* Submit button */
+  .btn-primary {
+    width: 100%;
+    background-color: rgba(0, 123, 255, 0.8);  /* More transparent blue background */
+    border-color: rgba(0, 123, 255, 0.8);  /* Matching transparent border */
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgba(0, 123, 255, 1);  /* Solid blue on hover */
+    border-color: rgba(0, 123, 255, 1);  /* Solid blue border on hover */
+  }
+  
+  /* Custom spacing for links */
+  a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjust margins */
+  .mb-3 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .d-flex.justify-content-between {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 576px) {
+    .custom-card {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .btn-primary {
+      font-size: 14px;
+    }
+  }
+  

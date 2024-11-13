@@ -1,0 +1,57 @@
+<p class="text-center" style="background-color: antiquewhite; font-size: 30px;font-style: italic;">Please enter the following information!</p>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card custom-card">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-4">Register</h5>
+
+      <form [formGroup]="register" (ngSubmit)="handleSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Please enter your email" formControlName="email">
+          <div *ngIf="formControls.email.touched && formControls.email.errors?.['required']" class="text-danger">
+            Email is required.
+          </div>
+          <div *ngIf="formControls.email.touched && formControls.email.errors?.['email']" class="text-danger">
+            Invalid email format.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Please enter your name" formControlName="name">
+          <div *ngIf="formControls.name.touched && formControls.name.errors?.['required']" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="mobileNumber" class="form-label">Mobile</label>
+          <input type="text" id="mobileNumber" class="form-control" placeholder="Please enter your mobile number" formControlName="mobileNumber">
+          <div *ngIf="formControls.mobileNumber.touched && formControls.mobileNumber.errors?.['required']" class="text-danger">
+            Mobile number is required.
+          </div>
+          <div *ngIf="formControls.mobileNumber.touched && formControls.mobileNumber.errors?.['pattern']" class="text-danger">
+            Mobile number must be 10 digits.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Please enter your password" formControlName="password">
+          <div *ngIf="formControls.password.touched && formControls.password.errors?.['required']" class="text-danger">
+            Password is required.
+          </div>
+          <div *ngIf="formControls.password.touched && formControls.password.errors?.['minlength']" class="text-danger">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <button type="submit" class="btn btn-primary" [disabled]="register.invalid">Register</button>
+          <a routerLink="/login" class="text-decoration-none">Already registered?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
