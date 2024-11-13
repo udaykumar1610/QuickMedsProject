@@ -33,7 +33,7 @@ public class UsersController {
 	
 	@PostMapping("/loginUser")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public Boolean loginUser(@RequestBody LoginRequest loginRequest) {
+	public String loginUser(@RequestBody LoginRequest loginRequest) {
 		return userService.loginUser(loginRequest);
 		
    }
@@ -77,3 +77,5 @@ public class UsersController {
 
 
 }
+
+

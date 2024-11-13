@@ -9,6 +9,7 @@ public class Users {
 	@Id
 	private String email;
 	
+	
 	private String name;
 	
 	private long mobileNumber;  
@@ -61,3 +62,6 @@ public class Users {
 		this.password = password;
 	}
 }
+
+
+

@@ -1,0 +1,28 @@
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  /* Align username text */
+  .navbar-text {
+    font-weight: bold;
+    margin-left: 15px;
+    color: #333;
+  }
+  
+  /* Card styling */
+  .card-nav {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card-nav:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image styling in cards */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }

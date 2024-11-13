@@ -1,36 +1,35 @@
-/* General page styling */
+/* 
 body {
     background-color: #f4f6f9;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
   }
-  
-  /* Flexbox container to center the card */
+ 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
   }
   
-  /* Styling the card */
+
   .custom-card {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-    background-color: rgba(255, 255, 255, 0.2); /* Much more transparent background (20% opacity) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2); 
     padding: 30px;
-    border: 2px solid rgba(0, 123, 255, 0.3); /* Lighter, semi-transparent border */
+    border: 2px solid rgba(0, 123, 255, 0.3); 
   }
   
-  /* Styling the card body */
+ 
   .custom-card .card-body {
     padding: 25px;
   }
   
-  /* Title styling */
+  
   .custom-card .card-title {
     font-size: 24px;
     font-weight: bold;
@@ -38,44 +37,41 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Form field label */
+ 
   .form-label {
     font-weight: 500;
     color: #555;
   }
   
-  /* Input fields */
   .form-control {
     border-radius: 5px;
-    border: 1px solid rgba(0, 123, 255, 0.3); /* Semi-transparent blue border */
+    border: 1px solid rgba(0, 123, 255, 0.3); 
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.4); /* More transparent input fields (40% opacity) */
+    background-color: rgba(255, 255, 255, 0.4); 
   }
   
   .form-control:focus {
-    border-color: rgba(0, 123, 255, 1); /* Solid blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect on focus */
+    border-color: rgba(0, 123, 255, 1); 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
   }
   
-  /* Submit button */
+
   .btn-primary {
     width: 100%;
-    background-color: rgba(0, 123, 255, 0.4); /* More transparent blue background (40% opacity) */
-    border-color: rgba(0, 123, 255, 0.4); /* Semi-transparent border */
+    border-color: rgba(0, 123, 255, 0.4); 
     font-size: 16px;
     padding: 12px;
     border-radius: 5px;
   }
   
   .btn-primary:hover {
-    background-color: rgba(0, 123, 255, 0.8); /* Solid blue on hover */
-    border-color: rgba(0, 123, 255, 0.8); /* Solid blue border on hover */
+    background-color: rgba(0, 123, 255, 0.8); 
+    border-color: rgba(0, 123, 255, 0.8); 
   }
   
-  /* Custom spacing for links */
-  a {
+  /* a {
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
@@ -85,8 +81,8 @@ body {
     text-decoration: underline;
   }
   
-  /* Adjust margins */
-  .mb-3 {
+  */
+  /* .mb-3 {
     margin-bottom: 1.5rem !important;
   }
   
@@ -101,10 +97,10 @@ body {
   
   .text-center {
     text-align: center;
-  }
+  } */
   
-  /* Responsive styling */
-  @media (max-width: 576px) {
+ 
+  /* @media (max-width: 576px) {
     .custom-card {
       padding: 20px;
       max-width: 90%;
@@ -113,5 +109,52 @@ body {
     .btn-primary {
       font-size: 14px;
     }
+  } */
+   
+
+  body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .custom-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);  /* Increased transparency */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 30px;
+    border: 1px solid rgba(0, 123, 255, 0.3); /* Light border with transparency */
+  }
+  
+  .card h3 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.8); /* More transparent input fields */
+    border: 1px solid rgba(0, 123, 255, 0.5); /* Semi-transparent blue border */
+  }
+  
+  .form-control:focus {
+    border-color: rgba(0, 123, 255, 1); /* Full opacity blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect on focus */
+  }
+  
+  .btn-primary {
+    background-color: rgba(0, 123, 255, 0.7); /* More transparent blue background */
+    border-color: rgba(0, 123, 255, 0.7); /* Transparent border */
+  }
+  
+  .btn-primary:hover {
+    background-color: rgba(0, 123, 255, 1); /* Solid blue on hover */
+    border-color: rgba(0, 123, 255, 1); /* Solid blue border on hover */
   }
   

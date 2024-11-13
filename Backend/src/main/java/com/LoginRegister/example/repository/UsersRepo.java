@@ -9,5 +9,6 @@ import com.LoginRegister.example.entity.Users;
 public interface UsersRepo extends JpaRepository<Users, String> {
 	
 	
+	
 
 }

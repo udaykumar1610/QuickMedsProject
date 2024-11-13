@@ -21,26 +21,49 @@ public class UserService {
 		
 	}
 	
-	public Boolean loginUser(LoginRequest loginRequest) {
-		
-		Optional<Users> user = usersRepo.findById(loginRequest.getUserId());
-		Users user1 = user.get();
-		
-		if(user1 == null) {
-			return false;
-		}
-		
-		
-		
-		if(!user1.getPassword().equals(loginRequest.getPassword())) {
-			return false;
-		}
-		
-		return true;
-		
-		
-		
+	
+//public Boolean loginUser(LoginRequest loginRequest) {
+//		
+//		Optional<Users> user = usersRepo.findById(loginRequest.getUserId());
+//		Users user1 = user.get();
+//		
+//		if(user1 == null) {
+//			return false;
+//		}
+//		
+//		
+//		
+//		if(!user1.getPassword().equals(loginRequest.getPassword())) {
+//			return false;
+//		}
+//		
+//		return true;
+//		
+//		
+//		
+//	}
+	
+	
+	public String loginUser(LoginRequest loginRequest) {
+	    // Find the user by userId (or email, depending on your use case)
+	    Optional<Users> userOptional = usersRepo.findById(loginRequest.getUserId());
+	    
+	    // If user doesn't exist, return null or error message
+	    if (userOptional.isEmpty()) {
+	        return "Invalid user credentials";
+	    }
+
+	    Users user = userOptional.get(); // Get the actual user from the Optional
+
+	    // Validate the password
+	    if (!user.getPassword().equals(loginRequest.getPassword())) {
+	        return "Incorrect password";
+	    }
+
+	    // Return the user's name if login is successful
+	    return user.getName(); // Return user's name as a string
 	}
+
 	public Optional<Users> getUserById(String name) {
 		return usersRepo.findById(name);
 	}
