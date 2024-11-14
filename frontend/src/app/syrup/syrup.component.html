@@ -1,0 +1,43 @@
+<div class="container">
+    <h1 class="text-center mb-4">Syrups</h1>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <div *ngIf="!products.length && !errorMessage" class="alert alert-info">
+      Loading Syrups...
+    </div>
+  
+    <div *ngIf="products.length">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let product of products">
+          <div class="card mb-4 custom-card">
+            <img 
+              *ngIf="product.imageUrl" 
+              [src]="product.imageUrl" 
+              class="card-img-top" 
+              alt="{{ product.name }}" 
+              style="height: 200px; object-fit: cover;">
+            
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">
+                {{ product.name }}
+              </h5>
+              <p class="card-text text-center">
+                <strong>Brand:</strong> {{ product.brand }} <br>
+                <strong>Category:</strong> {{ product.category }} <br>
+                <strong>Description:</strong> {{ product.description }} <br>
+                <strong>Price:</strong> {{ product.price | currency }}
+              </p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-success" (click)="addToCart(product)">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  

@@ -21,7 +21,8 @@ export class DashboardComponent {
   logout() {
     // Implement logout functionality
     console.log("User logged out");
-    this.router.navigate(['/signin']);
+    this.router.navigate(['/login']);
 
 }
+
 }

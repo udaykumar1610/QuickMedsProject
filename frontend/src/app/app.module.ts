@@ -15,6 +15,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { TabletComponent } from './tablet/tablet.component';
+import { SyrupComponent } from './syrup/syrup.component';
+import { InjectionsComponent } from './injections/injections.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { CarouselComponent } from './carousel/carousel.component';
     AboutusComponent,
     ContactusComponent,
     DashboardComponent,
-    CarouselComponent
+    CarouselComponent,
+    TabletComponent,
+    SyrupComponent,
+    InjectionsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
